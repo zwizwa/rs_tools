@@ -2,10 +2,21 @@
 name = "async"
 version = "0.1.0"
 authors = ["tom@zwizwa.be"]
+edition = "2021"
 
 [dependencies]
-futures = "0.3"
+futures = { version = "0.3", default-features = false }
 
+# lib is no_std : main point is to explore this for embedded
+[lib]
+name = "rst_async"
+path = "src/lib.rs"
+
+# the example binaries are std to have println! etc...
+# maybe alternatively switch to qemu target?
 [[bin]]
-name = "async"
-path = "src/main.rs"
+name = "ex1"
+path = "examples/ex1.rs"
+
+
+
