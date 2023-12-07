@@ -6,5 +6,8 @@ cargo build --release
 rm -f test
 gcc -o test test.c -L ./target/release -lcmix_ex2 -Wl,--gc-sections
 ./test
+objdump -d test >test.dasm
+
+
 
 

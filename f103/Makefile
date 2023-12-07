@@ -7,7 +7,7 @@
 # This is now set as an environment variable.
 # ELF=bluepill.f103.elf
 
-.PHONY: all
+.PHONY: all toolchain
 all:
 	cargo build --release
 	if [ ! -z "$$ELF" ]; then ln -f target/thumbv7m-none-eabi/release/bluepill "$$ELF"; fi # && arm-none-eabi-objdump -d $$ELF
@@ -23,7 +23,6 @@ clean:
 %.dasm: %.elf
 	arm-none-eabi-objdump -d $< >$@.tmp
 	mv $@.tmp $@
-
 
 
 

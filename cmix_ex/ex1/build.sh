@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Minimal example without panic code, linking rust static lib into a C program.
 # Some notes:
 # - optimization is necessary to get rid of the panic handling code

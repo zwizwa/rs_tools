@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # See # https://rust-embedded.github.io/cortex-m-quickstart/cortex_m_quickstart/
 
